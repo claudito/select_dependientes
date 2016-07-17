@@ -7,12 +7,8 @@ class Conexion extends mysqli
 	
 	public function __construct()
 	{  
-		$servidor='localhost';
-		$usuario='root';
-		$password='sistemas';
-		$bd='crud';
 
-		parent::__construct($servidor,$usuario,$password,$bd);
+		parent::__construct(SERVERBD,USERBD,PASSBD,BD);
 		$this->query("SET NAMES 'utf8'");
 		$this->connect_errno ? die('Error con la conexion') : $x = 'Conectado';
 		//echo $x;
